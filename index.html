@@ -14,13 +14,44 @@
 
 </head>
 
-<body>
-  <header>
-    <!-- place navbar here -->
+<body class="container-fluid">
+  <header class="container-fluid">
+    <section class="row justify-content-center mt-3 mb-1">
+      <div class="col-6 text-white text-center">
+        <h1>PokeDollar Farm</h1>
+      </div>
+    </section>
   </header>
-  <main>
+
+  <main class="container-fluid">
+    <section class="section row justify-content-center align-items-end ">
+      <img class="click-box" onclick="addDollar()" src="https://i.gifer.com/8K8b.gif" alt="Trainer">
+    </section>
+    <section class="row justify-content-center">
+      <div class="col-4 d-flex align-self-end small-box text-light">
+        <div class="d-flex justify-content-between align-items-center">
+          <img onclick="buyAmulet()" src="https://cdn-icons-png.flaticon.com/512/188/188926.png" alt="Amulet Coin"
+            class="smaller-box img-fluid">
+        </div>
+      </div>
+      <div class="col-4 count-box rounded-top d-flex align-items-center justify-content-between">
+        <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
+          class="img-fluid poke-box" alt="PokeDollar">
+        <h1 id="total" class="text-light mx-2">0</h1>
+      </div>
+      <div class="col-4 d-flex align-self-end small-box text-light">
+        <div class="d-flex justify-content-between align-items-center">
+          <img onclick="buyMorePokemon()"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c861d306-8f42-4864-ab2e-61a271518c8a/df4gmwq-53c091ee-3c95-40e7-b4f3-f83fcea53b37.png/v1/fill/w_1280,h_1281,strp/quick_ball_by_ace_zeroartic_df4gmwq-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2M4NjFkMzA2LThmNDItNDg2NC1hYjJlLTYxYTI3MTUxOGM4YVwvZGY0Z213cS01M2MwOTFlZS0zYzk1LTQwZTctYjRmMy1mODNmY2VhNTNiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.VJqc50ARIk980fO2isMtnK1mKz-XrqYEAXVt-cqdgV4"
+            alt="QuickBall" class="smaller-box img-fluid">
+        </div>
+      </div>
+    </section>
+
+
 
   </main>
+
   <footer>
     <!-- place footer here -->
   </footer>

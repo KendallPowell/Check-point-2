@@ -1,0 +1,34 @@
+body {
+  height: 100vh;
+  background: url(https://media.pocketmonsters.net/imageboard/50/12278290030092.jpg);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.click-box {
+  width: 425px;
+  height: 425px;
+}
+
+.count-box {
+  width: 335px;
+  height: 95px;
+  background-color: rgb(2, 51, 212, .8);
+}
+
+.poke-box {
+  width: 65px;
+  height: 65px;
+}
+
+.small-box {
+  width: 165px;
+  height: 55px;
+  background-color: rgb(2, 51, 212, .8);
+}
+
+.smaller-box {
+  width: 35px;
+  height: 35px;
+}
