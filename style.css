@@ -6,15 +6,17 @@ body {
   background-repeat: no-repeat;
 }
 
+/* NOTE Cynthia */
 .click-box {
   width: 425px;
   height: 425px;
 }
 
+/* NOTE total box */
 .count-box {
   width: 335px;
   height: 95px;
-  background-color: rgb(2, 51, 212, .8);
+  background-color: rgba(3, 45, 184, 0.815);
 }
 
 .poke-box {
@@ -22,13 +24,21 @@ body {
   height: 65px;
 }
 
+/* NOTE side panels */
 .small-box {
   width: 165px;
   height: 55px;
-  background-color: rgb(2, 51, 212, .8);
+  background-color: rgba(3, 45, 184, 0.815);
 }
 
-.smaller-box {
+/* NOTE modifiers */
+.modifier-box {
   width: 35px;
   height: 35px;
+}
+
+/* NOTE upgrade  */
+.upgrade-box {
+  width: 55px;
+  height: 55px;
 }
