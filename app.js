@@ -3,7 +3,7 @@ console.log('js loaded')
 let clickUpgrades = [
   {
     name: 'Amulet Coin',
-    price: 100,
+    price: 75,
     quantity: 0,
     multiplier: 1
   }
@@ -33,7 +33,8 @@ function drawTotal() {
 }
 
 function buyAmulet() {
-  console.log('bought upgrade')
+
+  // console.log('bought upgrade')
 }
 
 function buyMorePokemon() {
