@@ -57,8 +57,11 @@ function buyMorePokemon() {
   let click = clickUpgrades.find(f => f.price == f.price)
   if (total >= click.price) {
     total -= click.price
-    clickCynthia++
+    click.price += 25
+    clickCynthia += 2
     console.log('bought', click.name)
+    let clickPrice = document.getElementById('click-price')
+    clickPrice.innerText = click.price
     let cynthiaClicker = document.getElementById('cynthia')
     cynthiaClicker.innerText = clickCynthia
   } else {
@@ -73,6 +76,9 @@ function buyMoreTrainers() {
     total -= auto.price
     console.log('Trainers have showed up to Help!')
     autoCynthia += 20
+    auto.price += 250
+    let autoPrice = document.getElementById('auto-price')
+    autoPrice.innerText = auto.price
     let cynthiaAuto = document.getElementById('auto')
     cynthiaAuto.innerText = autoCynthia
     // autoCynthia += clickCynthia * auto.multiplier
