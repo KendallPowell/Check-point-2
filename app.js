@@ -2,13 +2,13 @@ console.log('js loaded')
 
 let clickUpgrades = [
   {
-    name: 'Amulet Coin',
+    name: 'Pokemon',
     price: 75,
     quantity: 0,
     multiplier: 1
   },
   {
-    name: 'Shiny Charm',
+    name: 'Legendary',
     price: 250,
     quantity: 0,
     multiplier: 7
@@ -17,13 +17,13 @@ let clickUpgrades = [
 
 let autoUpgrades = [
   {
-    name: 'More Pokemon',
+    name: 'Trainer',
     price: 500,
     quantity: 0,
     multiplier: 20
   },
   {
-    name: 'Legendary',
+    name: 'Red',
     price: 15000,
     quantity: 0,
     multiplier: 1000
@@ -31,9 +31,9 @@ let autoUpgrades = [
 ]
 
 let clickCynthia = 1
-let shinyCynthia = 7
+let legendaryCynthia = 7
 let autoCynthia = 0
-let autoLegendary = 1000
+let autoRed = 1000
 let total = 0
 
 function addDollar() {
