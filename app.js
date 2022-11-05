@@ -12,7 +12,7 @@ let clickUpgrades = [
 let autoUpgrades = [
   {
     name: 'More Pokemon',
-    price: 300,
+    price: 150,
     quantity: 0,
     multiplier: 20
   }
@@ -34,7 +34,7 @@ function drawTotal() {
 
 function buyAmulet() {
 
-  // console.log('bought upgrade')
+  console.log('bought upgrade')
 }
 
 function buyMorePokemon() {

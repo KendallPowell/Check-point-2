@@ -6,6 +6,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.bg-darkBlue {
+  background-color: rgba(3, 45, 184, 0.815);
+}
+
 /* NOTE Cynthia */
 .click-box {
   width: 425px;
@@ -33,12 +37,11 @@ body {
 
 /* NOTE modifiers */
 .modifier-box {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 
-/* NOTE upgrade  */
 .upgrade-box {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
 }
