@@ -18,7 +18,7 @@ let clickUpgrades = [
 let autoUpgrades = [
   {
     name: 'More Pokemon',
-    price: 1000,
+    price: 500,
     quantity: 0,
     multiplier: 20
   },
@@ -26,11 +26,14 @@ let autoUpgrades = [
     name: 'Legendary',
     price: 15000,
     quantity: 0,
-    multiplier: 500
+    multiplier: 1000
   }
 ]
 
 let clickCynthia = 1
+let shinyCynthia = 7
+let autoCynthia = 0
+let autoLegendary = 1000
 let total = 0
 
 function addDollar() {
@@ -39,23 +42,52 @@ function addDollar() {
   drawTotal()
 }
 
+function autoDollars() {
+  console.log('making 20s')
+  total += autoCynthia
+  drawTotal()
+}
+
 function drawTotal() {
   let getTotal = document.getElementById('total')
   getTotal.innerText = total
 }
 
-function buyAmulet() {
-  let click = clickUpgrades.find(f => f.price == 75)
+function buyMorePokemon() {
+  let click = clickUpgrades.find(f => f.price == f.price)
   if (total >= click.price) {
-    total -= 75
+    total -= click.price
     clickCynthia++
     console.log('bought', click.name)
+    let cynthiaClicker = document.getElementById('cynthia')
+    cynthiaClicker.innerText = clickCynthia
   } else {
     window.alert('Go fight Cynthia more!')
   }
   drawTotal()
 }
 
-function buyMorePokemon() {
-  console.log('bought More Pokemon')
+function buyMoreTrainers() {
+  let auto = autoUpgrades.find(f => f.price == f.price)
+  if (total >= auto.price) {
+    total -= auto.price
+    console.log('Trainers have showed up to Help!')
+    autoCynthia += 20
+    let cynthiaAuto = document.getElementById('auto')
+    cynthiaAuto.innerText = autoCynthia
+    // autoCynthia += clickCynthia * auto.multiplier
+  } else {
+    window.alert('Go fight Cynthia more!')
+  }
+  drawTotal()
 }
+
+function runAuto() {
+  if (autoCynthia >= 20) {
+    console.log('trainers are helping')
+    autoDollars()
+
+  }
+}
+
+setInterval(runAuto, 5000)
