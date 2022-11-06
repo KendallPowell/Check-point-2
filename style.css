@@ -10,6 +10,10 @@ body {
   background-color: rgba(3, 45, 184, 0.815);
 }
 
+.play-fair {
+  font-family: 'Playfair Display', serif;
+}
+
 /* NOTE Cynthia */
 .click-box {
   width: 425px;
@@ -47,6 +51,6 @@ body {
 }
 
 .btn-box {
-  width: 180px;
+  width: 190px;
   height: 60px;
 }

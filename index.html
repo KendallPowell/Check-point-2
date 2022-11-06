@@ -11,20 +11,24 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 </head>
 
 <body class="container-fluid">
   <header class="container-fluid">
     <section class="row justify-content-center mt-3 mb-1">
-      <div class="col-6 text-white text-center">
+      <div class="col-6 text-white text-center play-fair">
         <h1>PokeDollar Farm</h1>
       </div>
     </section>
   </header>
 
   <main class="container-fluid">
-    <section class="section row justify-content-center align-items-end ">
+    <section class="section row justify-content-center align-items-end shadow-lg">
       <img class="click-box" onclick="addDollar()" src="https://i.gifer.com/8K8b.gif" alt="Trainer">
     </section>
     <section class="row justify-content-center mt-3">
@@ -32,15 +36,15 @@
         class="col-4 d-flex align-self-end small-box text-light justify-content-evenly align-items-center rounded-top">
         <div class="row">
           <div class="col-6">
-            <img src="https://ssb.wiki.gallery/images/thumb/6/64/PokeBallTrophyWiiU.png/100px-PokeBallTrophyWiiU.png"
-              alt="money gained" class="modifier-box img-fluid">
+            <img src="https://media.tenor.com/CpRW4WUGa3IAAAAi/pok%C3%A9ball-pok%C3%A9mon.gif" alt="money gained"
+              class="modifier-box img-fluid">
           </div>
           <div class="col-6">
             <div id="cynthia" class="mt-1">1</div>
           </div>
         </div>
       </div>
-      <div class="col-4 count-box rounded-top d-flex align-items-center justify-content-between shadow-lg">
+      <div class="col-4 count-box rounded-top d-flex align-items-center justify-content-between">
         <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
           class="img-fluid poke-box" alt="PokeDollar">
         <h1 id="total" class="text-light mx-2">0</h1>
@@ -57,52 +61,135 @@
         </div>
       </div>
     </section>
-    <section class="row justify-content-center">
+    <section class="row justify-content-center shadow-lg">
       <div class="col-10">
         <div class="row bg-primary border border-2 border-info border-opacity-75 rounded p-2 justify-content-evenly">
           <div class="col-5 bg-secondary text-white rounded shadow-lg my-2">
-            <div class="row p-1">
-              <div class="col-4 d-flex justify-content-center my-2 align-items-start">
+            <div class="row p-1 ms-1">
+              <div class="col-4 d-flex justify-content-center my-2 ms-2 align-items-start">
                 <div>
-                  <div class="text-lighter">CLICK UPGRADES</div>
-                  <button onclick="buyMorePokemon()"
-                    class="text-start p-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
+                  <div class="text-lighter ms-2">CLICK UPGRADES</div>
+                  <button onclick="buyClickUpgrade('Pokemon')"
+                    class="text-start p-1 mb-4 mt-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
                     <img
                       src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c861d306-8f42-4864-ab2e-61a271518c8a/df4gmwq-53c091ee-3c95-40e7-b4f3-f83fcea53b37.png/v1/fill/w_1280,h_1281,strp/quick_ball_by_ace_zeroartic_df4gmwq-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2M4NjFkMzA2LThmNDItNDg2NC1hYjJlLTYxYTI3MTUxOGM4YVwvZGY0Z213cS01M2MwOTFlZS0zYzk1LTQwZTctYjRmMy1mODNmY2VhNTNiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.VJqc50ARIk980fO2isMtnK1mKz-XrqYEAXVt-cqdgV4"
                       alt="Quick Ball" class="upgrade-box img-fluid ms-1 p-1 text-start">
                     <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
                       alt="money gained" class="upgrade-box img-fluid ms-1 p-1">
-                    <h3 id="click-price">75</h3>
+                    <h3 id="Pokemon">15</h3>
+                  </button>
+                  <button onclick="buyClickUpgrade('Legendary')"
+                    class="text-start p-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
+                    <img src="https://i.pinimg.com/originals/c2/6d/2b/c26d2b5b239f966d2eab1d6015b115a9.png"
+                      alt="Master Ball" class="upgrade-box img-fluid ms-1 p-1 text-start">
+                    <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
+                      alt="money gained" class="upgrade-box img-fluid ms-1 p-1">
+                    <h3 id="Legendary">250</h3>
                   </button>
                 </div>
               </div>
-              <div class="col-1 mt-4 p-1">
-                <div>Add Pokemon</div>
-                <h5>+1</h5>
+              <div class="col-1 mt-3 p-1 ms-1">
+                <div class="mt-3 p-1">Pokemon</div>
+                <h5 class="mb-2">+1</h5>
+                <div class="mt-4 p-1">Legendary</div>
+                <h5>+10</h5>
               </div>
               <div class="col-1"></div>
-              <div class="col-4 d-flex justify-content-center my-2">
+              <div class="col-4 d-flex justify-content-center my-2 ms-2">
                 <div>
-                  <div class="text-lighter">CLICK UPGRADES</div>
-                  <button onclick="buyMoreTrainers()"
-                    class="text-start p-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
+                  <div class="text-lighter">AUTO UPGRADES</div>
+                  <button onclick="buyAutoUpgrades('Trainer')"
+                    class="text-start p-1 mb-4 mt-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
                     <img src="https://art.pixilart.com/15a49984d61a16a.png" alt="Quick Ball"
                       class="upgrade-box img-fluid ms-1 p-1">
                     <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
                       alt="money gained" class="upgrade-box img-fluid ms-1 p-1">
-                    <h3 id="auto-price" class="me-2">500</h3>
+                    <h3 id="Trainer" class="me-2">500</h3>
+                  </button>
+                  <button onclick="buyAutoUpgrades('Red')"
+                    class="text-start p-1 d-flex align-items-center bg-darkBlue border border-2 border-white justify-content-evenly rounded btn-box">
+                    <img src="https://pbs.twimg.com/media/EvKre4EXIAQ4Jpj.png" alt="Quick Ball"
+                      class="upgrade-box img-fluid ms-1 p-1">
+                    <img src="https://pbs.twimg.com/profile_images/1501649570341736462/Q-9o4Ynz_400x400.png"
+                      alt="money gained" class="upgrade-box img-fluid ms-1 p-1">
+                    <h3 id="Red" class="me-2">10000</h3>
                   </button>
                 </div>
               </div>
-              <div class="col-1 mt-4 p-1">
-                <div>Add Trainer</div>
-                <h5>+20</h5>
+              <div class="col-1 mt-3 p-1 ms-1">
+                <div class="mt-3 p-1">Trainer</div>
+                <h5 class="mb-2">+50</h5>
+                <div class="mt-4 p-1">Red</div>
+                <h5>+1000</h5>
               </div>
             </div>
           </div>
           <div class="col-5 bg-secondary text-white rounded shadow-lg my-2">
+            <div class="row p-1 ms-1">
+              <div class="d-flex justify-content-between my-2 ms-2">
+                <div class="col-6">
+                  <div>CLICK STATS</div>
+                </div>
+                <div class="col-6">
+                  <div>AUTOMATIC STATS</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-white">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-1 border border-white border-1 ms-3">
+                  <h3 id="clicked">0</h3>
+                </div>
+                <div class="col-3 d-flex justify-content-between">
+                  <h6>Pokemon</h6>
+                  <i class="mdi mdi-arrow-right-thick fw-bold text-white"></i>
+                </div>
+                <div class="col-1 border border-white border-1">
+                  <h3 id="cynthia-click">0</h3>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-1 border border-white border-1 ms-3">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-3 d-flex justify-content-between">
+                  <h6>Trainers</h6>
+                  <i class="mdi mdi-clock-fast fw-bold text-white"></i>
+                </div>
+                <div class="col-1 border border-white border-1">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="col-12 text-white mt-4">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-1 border border-white border-1 ms-3">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-3 d-flex justify-content-between">
+                  <h6>Legendaries</h6>
+                  <i class="mdi mdi-arrow-right-thick fw-bold text-white"></i>
+                </div>
+                <div class="col-1 border border-white border-1">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-1 border border-white border-1 ms-3">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-3 d-flex justify-content-between">
+                  <h6>Trainer Red</h6>
+                  <i class="mdi mdi-clock-fast fw-bold text-white"></i>
+                </div>
+                <div class="col-1 border border-white border-1">
+                  <h3 id="">0</h3>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
     </section>
 
 
