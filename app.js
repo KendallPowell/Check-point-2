@@ -5,7 +5,7 @@ let clickUpgrades = [
     name: 'Pokemon',
     price: 15,
     quantity: 0,
-    multiplier: 1
+    multiplier: 1,
   },
   {
     name: 'Legendary',
@@ -51,45 +51,12 @@ function drawTotal() {
   getTotal.innerText = total
 }
 
-// function buyMorePokemon() {
-//   let click = clickUpgrades.find(f => f.price == f.price)
-//   if (total >= click.price) {
-//     total -= click.price
-//     click.price += 25
-//     clickCynthia += 1
-//     console.log('bought', click.name)
-//     let clickPrice = document.getElementById('click-price')
-//     clickPrice.innerText = click.price
-//     let cynthiaClicker = document.getElementById('cynthia')
-//     cynthiaClicker.innerText = clickCynthia
-//   } else {
-//     window.alert('Go fight Cynthia more!')
-//   }
-//   drawTotal()
-// }
-
-// function buyMoreTrainers() {
-//   let auto = autoUpgrades.find(f => f.price == f.price)
-//   if (total >= auto.price) {
-//     total -= auto.price
-//     console.log('Trainers have showed up to Help!')
-//     autoCynthia += 20
-//     auto.price += 250
-//     let autoPrice = document.getElementById('auto-price')
-//     autoPrice.innerText = auto.price
-//     let cynthiaAuto = document.getElementById('auto')
-//     cynthiaAuto.innerText = autoCynthia
-//     // autoCynthia += clickCynthia * auto.multiplier
-//   } else {
-//     window.alert('Go fight Cynthia more!')
-//   }
-//   drawTotal()
-// }
 
 function buyClickUpgrade(name) {
   let click = clickUpgrades.find(c => c.name == name)
   if (total >= click.price) {
     total -= click.price
+    click.quantity++
     click.price += click.price
     clickCynthia += click.multiplier
     console.log(name)
@@ -97,17 +64,52 @@ function buyClickUpgrade(name) {
     clickPokemon.innerText = click.price
     let cynthiaClicker = document.getElementById('cynthia')
     cynthiaClicker.innerText = clickCynthia
-
   } else {
     window.alert('Go fight Cynthia more!')
   }
   drawTotal()
+  populateClick()
+  populateLegendary()
+}
+
+
+function populateClick() {
+  let click = clickUpgrades.find(c => c.name == "Pokemon")
+  let clicks = document.getElementById('clicks')
+  clicks.innerText = click.quantity * click.multiplier
+  let clicked = document.getElementById('clicked')
+  clicked.innerText = click.quantity
+}
+
+function populateLegendary() {
+  let click = clickUpgrades.find(c => c.name == "Legendary")
+  let legendaries = document.getElementById('legendaries-clicked')
+  legendaries.innerText = click.quantity
+  let legendariesClicked = document.getElementById('legendaries')
+  legendariesClicked.innerText = click.quantity * click.multiplier
+}
+
+function populateTrainer() {
+  let click = autoUpgrades.find(c => c.name == "Trainer")
+  let clicks = document.getElementById('trainers-pw')
+  clicks.innerText = click.quantity * click.multiplier
+  let clicked = document.getElementById('trainers')
+  clicked.innerText = click.quantity
+}
+
+function populateRed() {
+  let click = autoUpgrades.find(c => c.name == "Red")
+  let legendaries = document.getElementById('red')
+  legendaries.innerText = click.quantity
+  let legendariesClicked = document.getElementById('red-pw')
+  legendariesClicked.innerText = click.quantity * click.multiplier
 }
 
 function buyAutoUpgrades(name) {
   let auto = autoUpgrades.find(a => a.name == name)
   if (total >= auto.price) {
     total -= auto.price
+    auto.quantity++
     auto.price += auto.price
     autoCynthia += auto.multiplier
     console.log(name)
@@ -119,6 +121,8 @@ function buyAutoUpgrades(name) {
     window.alert('Go fight Cynthia more!')
   }
   drawTotal()
+  populateRed()
+  populateTrainer()
 }
 
 
