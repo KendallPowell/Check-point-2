@@ -35,7 +35,7 @@ let autoCynthia = 0
 let total = 0
 
 function addDollar() {
-  // console.log('plus', 1)
+  console.log('add', 1)
   total += clickCynthia
   drawTotal()
 }
